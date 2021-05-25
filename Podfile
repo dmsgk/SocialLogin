@@ -6,5 +6,8 @@ target 'SocialLogin' do
   use_frameworks!
 
   # Pods for SocialLogin
+pod 'KakaoSDKCommon'
+pod 'KakaoSDKAuth'
+pod 'KakaoSDKUser'
 
 end
