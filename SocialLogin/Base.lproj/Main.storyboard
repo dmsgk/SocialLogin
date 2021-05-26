@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqh-aY-CAi">
-                                <rect key="frame" x="87" y="544" width="240" height="59"/>
+                                <rect key="frame" x="87" y="288" width="240" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Mqh-aY-CAi" secondAttribute="height" multiplier="240:59" id="2yj-9C-vIL"/>
                                 </constraints>
@@ -28,15 +28,55 @@
                                     <action selector="touchUpKakaoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kMh-Ou-qUC"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="BkN-7z-8Yp">
+                                <rect key="frame" x="87" y="144" width="239.5" height="114"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-uw-F90">
+                                        <rect key="frame" x="0.0" y="29.5" width="55" height="55"/>
+                                        <color key="backgroundColor" red="0.71554161179999998" green="0.66855584479999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fjQ-uw-F90" secondAttribute="height" multiplier="1:1" id="0I5-IF-2jW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xuz-D8-nOc">
+                                        <rect key="frame" x="98" y="37.5" width="141.5" height="39"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InfoLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uq-qG-80Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="yds03080@naver.com" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUt-xr-u3y">
+                                                <rect key="frame" x="0.0" y="24.5" width="141.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BkN-7z-8Yp" secondAttribute="height" multiplier="239:114" id="XIO-nN-EPo"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mqh-aY-CAi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="500" id="Ix0-mL-fKG"/>
+                            <constraint firstItem="BkN-7z-8Yp" firstAttribute="width" secondItem="Mqh-aY-CAi" secondAttribute="width" multiplier="0.997917" id="bOx-cq-WgS"/>
+                            <constraint firstItem="BkN-7z-8Yp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="dIi-JI-LcE"/>
                             <constraint firstItem="Mqh-aY-CAi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="hTt-Ru-Dll"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mqh-aY-CAi" secondAttribute="trailing" constant="87" id="m0v-BL-pLI"/>
+                            <constraint firstItem="Mqh-aY-CAi" firstAttribute="top" secondItem="BkN-7z-8Yp" secondAttribute="bottom" constant="30" id="plz-Tt-6Dw"/>
+                            <constraint firstItem="BkN-7z-8Yp" firstAttribute="leading" secondItem="Mqh-aY-CAi" secondAttribute="leading" id="rny-B0-0Cq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="kUt-xr-u3y" id="eYY-fv-A4L"/>
+                        <outlet property="infoLabel" destination="2Uq-qG-80Q" id="hsd-NI-TzR"/>
+                        <outlet property="profileImageView" destination="fjQ-uw-F90" id="0Rk-gP-Awa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
